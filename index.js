@@ -9,7 +9,7 @@ var bodyParser = require('body-parser');
 var fetch = require('node-fetch');
 var app = express();
 var router = express.Router();
-
+app.use('/', router);
 
 var port = process.env.PORT || 8080;
 
@@ -27,7 +27,6 @@ router.post('/forgive', function(req, res, next) {
   forgive(req.body.number);
 });
 
-app.use('/', router);
 
 app.use(function (err, req, res, next) {
   console.error(err.stack);
