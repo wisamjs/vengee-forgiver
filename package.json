@@ -9,9 +9,7 @@
   "author": "Wisam Zaghal <wisamzaghal@gmail.com> (http://wisam.io/)",
   "license": "ISC",
   "dependencies": {
-    "twilio": "^2.5.2"
-  },
-  "Dependencies": {
+    "twilio": "^2.5.2",
     "body-parser": "^1.14.1",
     "express": "^4.13.3",
     "node-fetch": "^1.3.3"
