@@ -24,7 +24,9 @@ router.get('/', function (req, res) {
 });
 
 router.post('/forgive', function(req, res, next) {
+  console.log(req.body);
   forgive(req.body.number);
+  res.status(200).send('Hello world!');
 });
 
 app.use('/', router);
@@ -40,12 +42,13 @@ app.listen(port, function () {
 
 
 function forgive(number) {
+  console.log(number);
   client.messages.create({
     to: number,
     from: "+16474961963",
     body: "You have been forgiven."
     },
     function(err, message) {
-      console.log(message.sid);
+      console.log(message);
   });
 }
