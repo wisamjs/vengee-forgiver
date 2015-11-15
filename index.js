@@ -1,7 +1,7 @@
 'use strict';
 
 //require the Twilio module and create a REST client
-var client = require('twilio')(process.env.accountSid, process.env.authToken);
+// var client = require('twilio')(process.env.accountSid, process.env.authToken);
 
 
 var express = require('express');
@@ -39,13 +39,13 @@ app.listen(port, function () {
 });
 
 
-function forgive(number) {
-  client.messages.create({
-    to: number,
-    from: "+16474961963",
-    body: "You have been forgiven."
-    },
-    function(err, message) {
-      console.log(message.sid);
-  });
-}
+// function forgive(number) {
+//   client.messages.create({
+//     to: number,
+//     from: "+16474961963",
+//     body: "You have been forgiven."
+//     },
+//     function(err, message) {
+//       console.log(message.sid);
+//   });
+// }
