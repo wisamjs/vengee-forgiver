@@ -27,7 +27,7 @@ router.post('/forgive', function(req, res, next) {
   forgive(req.body.number);
 });
 
-app.use('/api', router);
+app.use('/', router);
 
 app.use(function (err, req, res, next) {
   console.error(err.stack);
